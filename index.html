@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlackNet - A decentralized privacy-focused network and browser ecosystem built around multi-hop encrypted relay routing.">
+    <meta name="keywords" content="privacy, decentralized, network, relay, encryption, browser, anonymous">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>BlackNet - Decentralized Privacy Network</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">⬢ BlackNet</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#browser">Browser</a></li>
+                <li><a href="#relay">Relay Nodes</a></li>
+                <li><a href="#docs">Documentation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Animated Background -->
+    <div class="network-background">
+        <canvas id="network-canvas"></canvas>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">BlackNet</h1>
+                <p class="hero-subtitle">A decentralized privacy-focused network and browser system built around multi-hop encrypted relay routing.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#browser" class="btn btn-primary">
+                        <span class="btn-icon">↓</span> Download BlackNet Browser
+                    </a>
+                    <a href="#relay" class="btn btn-secondary">
+                        <span class="btn-icon">↓</span> Download Relay Node Software
+                    </a>
+                    <a href="#docs" class="btn btn-outline">
+                        <span class="btn-icon">→</span> View Documentation
+                    </a>
+                    <a href="#relay" class="btn btn-outline">
+                        <span class="btn-icon">⟳</span> Run a Node
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section overview-section">
+        <div class="container">
+            <h2>Overview</h2>
+            <p class="section-intro">BlackNet is a distributed network designed to route traffic through volunteer-operated relay nodes using layered encryption and multi-hop routing.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">◆</div>
+                    <h3>No Centralized Infrastructure</h3>
+                    <p>Distributed relay network operated by volunteers worldwide, eliminating single points of failure.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⟳</div>
+                    <h3>Volunteer-Based Architecture</h3>
+                    <p>Anyone can contribute to the network by running a relay node with minimal hardware requirements.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Multi-Hop Encrypted Routing</h3>
+                    <p>Traffic encrypted at each hop through multiple relays, obscuring routing information at each layer.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚖</div>
+                    <h3>Independent Network Consensus</h3>
+                    <p>Network decisions made through distributed consensus without centralized authority.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Privacy-First Integration</h3>
+                    <p>Integrated browser and network stack designed from the ground up for privacy.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightweight & Efficient</h3>
+                    <p>Optimized routing and relay implementations for practical performance without sacrificing security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section how-it-works-section">
+        <div class="container">
+            <h2>How It Works</h2>
+            <p class="section-intro">BlackNet routes your traffic through multiple encrypted relay hops, ensuring no single relay can see the full path.</p>
+            
+            <div class="circuit-diagram">
+                <div class="circuit-node">
+                    <div class="node-icon">👤</div>
+                    <div class="node-label">Client</div>
+                </div>
+                
+                <div class="circuit-path">→</div>
+                
+                <div class="circuit-node">
+                    <div class="node-icon">⟢</div>
+                    <div class="node-label">Entry Relay</div>
+                </div>
+                
+                <div class="circuit-path">→</div>
+                
+                <div class="circuit-node">
+                    <div class="node-icon">⟢</div>
+                    <div class="node-label">Middle Relay</div>
+                </div>
+                
+                <div class="circuit-path">→</div>
+                
+                <div class="circuit-node">
+                    <div class="node-icon">⟢</div>
+                    <div class="node-label">Exit Relay</div>
+                </div>
+            </div>
+            
+            <div class="how-it-works-grid">
+                <div class="how-card">
+                    <h3>Partial Routing Data</h3>
+                    <p>Each relay only knows the previous and next hop. No single relay can see the complete circuit path or final destination.</p>
+                </div>
+                
+                <div class="how-card">
+                    <h3>Layered Encryption</h3>
+                    <p>Traffic is encrypted at each hop. Each relay removes one layer of encryption, passing the encrypted payload forward without access to original content.</p>
+                </div>
+                
+                <div class="how-card">
+                    <h3>Periodic Circuit Rotation</h3>
+                    <p>Circuits are automatically rotated periodically and on demand, changing the relay path to prevent correlation attacks over time.</p>
+                </div>
+                
+                <div class="how-card">
+                    <h3>Metadata Separation</h3>
+                    <p>BlackNet architecture separates connection metadata, timing information, and content across multiple relays to reduce tracking opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BlackNet Browser Section -->
+    <section id="browser" class="section browser-section">
+        <div class="container">
+            <h2>BlackNet Browser</h2>
+            <p class="section-intro">A hardened privacy browser engineered to route all traffic through BlackNet Core by default.</p>
+            
+            <div class="browser-content">
+                <div class="browser-features">
+                    <div class="browser-feature-item">
+                        <span class="check-icon">✓</span>
+                        <h4>Based on Firefox ESR</h4>
+                        <p>Hardened privacy configuration built on Firefox Extended Support Release for stability and security updates.</p>
+                    </div>
+                    
+                    <div class="browser-feature-item">
+                        <span class="check-icon">✓</span>
+                        <h4>Forced BlackNet Routing</h4>
+                        <p>All traffic automatically routed through BlackNet Core with no option to disable, ensuring consistent privacy.</p>
+                    </div>
+                    
+                    <div class="browser-feature-item">
+                        <span class="check-icon">✓</span>
+                        <h4>Anti-Fingerprinting Protections</h4>
+                        <p>Disabled JavaScript fingerprinting vectors, spoofed user-agent rotation, and canvas/WebGL rendering restrictions.</p>
+                    </div>
+                    
+                    <div class="browser-feature-item">
+                        <span class="check-icon">✓</span>
+                        <h4>DNS Leak Prevention</h4>
+                        <p>All DNS queries forced through BlackNet relays with encrypted DNS-over-HTTPS fallback.</p>
+                    </div>
+                    
+                    <div class="browser-feature-item">
+                        <span class="check-icon">✓</span>
+                        <h4>Circuit Diagnostics Panel</h4>
+                        <p>Built-in diagnostics dashboard showing active relay circuit, hop information, and performance metrics.</p>
+                    </div>
+                    
+                    <div class="browser-feature-item">
+                        <span class="check-icon">✓</span>
+                        <h4>Default Privacy Settings</h4>
+                        <p>Tracking protection enabled by default, no third-party cookies, automatic HTTPS enforcement.</p>
+                    </div>
+                </div>
+                
+                <div class="browser-download">
+                    <div class="platform-downloads">
+                        <a href="#" class="platform-btn">
+                            <span class="platform-icon">🐧</span>
+                            <span>Linux</span>
+                        </a>
+                        <a href="#" class="platform-btn">
+                            <span class="platform-icon">🍎</span>
+                            <span>macOS</span>
+                        </a>
+                        <a href="#" class="platform-btn">
+                            <span class="platform-icon">⊞</span>
+                            <span>Windows</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Relay Nodes Section -->
+    <section id="relay" class="section relay-section">
+        <div class="container">
+            <h2>Relay Nodes</h2>
+            <p class="section-intro">Contribute to the BlackNet privacy network by running a volunteer relay node on your infrastructure.</p>
+            
+            <div class="relay-content">
+                <div class="relay-info">
+                    <h3>Why Run a Relay?</h3>
+                    <p>Relay operators strengthen the BlackNet network, improve routing performance, and provide additional privacy guarantees to all users. Your node helps distribute the network across more geographic locations and diverse infrastructure.</p>
+                    
+                    <div class="relay-benefits">
+                        <div class="benefit">
+                            <h4>Easy Installation</h4>
+                            <p>Simple installation scripts for major Linux distributions. Configuration takes minutes.</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <h4>Bandwidth Control</h4>
+                            <p>Set custom bandwidth limits and scheduling to fit your infrastructure capacity and ISP constraints.</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <h4>Uptime Tracking</h4>
+                            <p>Monitor your relay's uptime and contribution metrics through the relay dashboard.</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <h4>Network Contribution</h4>
+                            <p>Your relay actively participates in routing and strengthens the entire BlackNet ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relay-cta">
+                    <div class="cta-box">
+                        <h3>Get Started with a Relay</h3>
+                        <p>Minimum requirements: 2GB RAM, 50Mbps bandwidth, Linux/macOS/Windows</p>
+                        <a href="#" class="btn btn-primary">Download Relay Software</a>
+                        <a href="#docs" class="btn btn-outline">View Setup Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Model Section -->
+    <section class="section security-section">
+        <div class="container">
+            <h2>Security Model</h2>
+            <p class="section-intro">Understanding BlackNet's privacy architecture and threat model.</p>
+            
+            <div class="security-content">
+                <div class="security-explanation">
+                    <h3>Privacy Through Distribution</h3>
+                    <p>BlackNet improves privacy by distributing traffic across multiple encrypted relay hops and separating knowledge between nodes in the network.</p>
+                    
+                    <ul class="security-points">
+                        <li><strong>No Single Observer:</strong> Individual relays cannot correlate users with destinations</li>
+                        <li><strong>Encryption Layers:</strong> Each hop has a different encryption key, preventing plaintext leakage</li>
+                        <li><strong>Distributed Trust:</strong> You don't need to trust any single relay operator</li>
+                        <li><strong>Metadata Isolation:</strong> Timing, destination, and content information spread across the network</li>
+                    </ul>
+                    
+                    <div class="security-disclaimer">
+                        <strong>⚠ Important Disclaimer:</strong>
+                        <p>No system guarantees absolute anonymity. Users should understand their threat model and limitations. BlackNet provides privacy improvements through technical design, but does not protect against:</p>
+                        <ul>
+                            <li>Compromised client-side malware</li>
+                            <li>Compromised operating system or firmware</li>
+                            <li>Attacks from global adversaries with massive traffic analysis capabilities</li>
+                            <li>User behavior patterns that reveal identity independently</li>
+                        </ul>
+                        <p>Always consider your specific threat model when using any privacy tool.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="section docs-section">
+        <div class="container">
+            <h2>Documentation</h2>
+            <p class="section-intro">Learn more about BlackNet architecture, deployment, and usage.</p>
+            
+            <div class="docs-grid">
+                <a href="#" class="doc-card">
+                    <h3>Architecture Overview</h3>
+                    <p>Deep dive into BlackNet's distributed architecture, relay routing, and encryption design.</p>
+                    <span class="doc-link">Read →</span>
+                </a>
+                
+                <a href="#" class="doc-card">
+                    <h3>Relay Setup Guide</h3>
+                    <p>Step-by-step instructions for running and configuring a BlackNet relay node.</p>
+                    <span class="doc-link">Read →</span>
+                </a>
+                
+                <a href="#" class="doc-card">
+                    <h3>Browser Security Model</h3>
+                    <p>Understand BlackNet Browser's privacy protections, fingerprinting defenses, and DNS handling.</p>
+                    <span class="doc-link">Read →</span>
+                </a>
+                
+                <a href="#" class="doc-card">
+                    <h3>Developer Documentation</h3>
+                    <p>API documentation, protocol specifications, and integration guides for developers.</p>
+                    <span class="doc-link">Read →</span>
+                </a>
+                
+                <a href="#" class="doc-card">
+                    <h3>Threat Model</h3>
+                    <p>Detailed analysis of BlackNet's security assumptions and limitations.</p>
+                    <span class="doc-link">Read →</span>
+                </a>
+                
+                <a href="#" class="doc-card">
+                    <h3>FAQ</h3>
+                    <p>Frequently asked questions about BlackNet privacy, performance, and deployment.</p>
+                    <span class="doc-link">Read →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BlackNet</h4>
+                    <p>Decentralized privacy-focused network and browser ecosystem.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/BlackNet-Official/blacknet-site" target="_blank">GitHub Repository</a></li>
+                        <li><a href="#">Issue Tracker</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#">Discussions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>BlackNet v1.0.0 • <a href="#">Open Source License</a> • © 2026 BlackNet Contributors</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/network-animation.js"></script>
+    <script src="assets/interactions.js"></script>
+</body>
+</html>
