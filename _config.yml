@@ -1,0 +1,20 @@
+# GitHub Pages Jekyll Configuration
+# This minimal config allows the site to deploy on GitHub Pages without processing markdown files
+
+# Site settings
+title: BlackNet
+description: A decentralized privacy-focused network and browser ecosystem
+
+# Build settings
+theme: null
+exclude:
+  - .gitignore
+  - README.md
+
+# GitHub Pages settings
+github:
+  is_project_page: true
+  repository_url: https://github.com/BlackNet-Official/blacknet-site
+
+# This tells Jekyll not to process the site further
+future: true
